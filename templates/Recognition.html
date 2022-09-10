@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/static/style.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <h1>Recognition</h1>
+    
+        <a href="Home" class="btn">Home</a>
+        <a href="Recognition" class="btn">Recognition</a>
+        <a href="About" class="btn">About</a>
+        <br><br>
+        <div class="content">
+
+            <div class="row">
+                <div class="column">
+                <img src="https://imgresizer.eurosport.com/unsafe/1200x1200/smart/filters:format(jpeg)/origin-imgresizer.eurosport.com/2021/11/29/3263189-66781048-2560-1440.jpg" alt="Snow" style="width:100%">
+                <div class="overlay">Lionel Messi</div>
+                </div>
+                <div class="column">
+                <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2021/11/29/16382188454226.jpg" alt="Forest" style="width:100%">
+                <div class="overlay">Alexia Putellas</div>
+                </div>
+                <div class="column">
+                <img src="https://www.tintaamarilla.es/wlpAdmin/uploads/FFZOxM1XoAU6tOf.jpg" alt="Mountains" style="width:100%">
+                <div class="overlay">Pedri</div>
+                </div>
+                <div class="column">
+                    <img src="https://www.debate.com.mx/__export/1638222540736/sites/debate/img/2021/11/29/gianluigi-donnarumma.jpg_423682103.jpg" alt="Forest" style="width:100%">
+                    <div class="overlay">Gianluigi Donnarumma</div>
+                </div>
+                <div class="column">
+                    <img src="https://s1.eestatic.com/2021/12/01/elbernabeu/631448831_216938893_1024x576.jpg" alt="Mountains" style="width:100%">
+                    <div class="overlay">Robert Lewandowski</div>
+                </div>
+            </div>
+            <br><br><br><br>
+            <!----------------------------------choose file---------------------------------------------->
+            <form action="{{ url_for('Recognition')}}" method="post" enctype="multipart/form-data">
+                <input type="file" name="file1">
+                <input type="submit" class="submit" value="Upload">
+                <br>
+                <br>
+                {{ output }}
+            </form>
+
+        </div>   
+
+
+        <a href="https://github.com/AbdelhamidADel" target="_blank" class="footer">GitHub/AbdelhamidADel</a>
+        
+    </body>
+</html>
